@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
+//esquema de empleado 
 let Empleado = new Schema({
     nombre: {
         type: String
@@ -8,15 +9,14 @@ let Empleado = new Schema({
     departamento: {
         type: String
     },
-    email: {
+    correo: {
         type: String
     },
     telefono: {
         type: Number
     }
-}, {
+},{//nombre de la colección
     collection: 'empleados'
 })
 
-module.exports = mongoose.model('Empleado', Empleado)
-
+module.exports = mongoose.model('Empleado',Empleado)
